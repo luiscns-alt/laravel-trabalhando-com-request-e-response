@@ -9,15 +9,15 @@
 </head>
 
 <body>
-    <form action="{{ route('clientes.store')}}?nome=teste123" method="POST">
+    <form action="{{ route('clientes.store')}}" method="POST">
         @csrf
-        {{-- <label for="nome">Nome: </label>
+        <label for="nome">Nome: </label>
         <input type="text" name='nome'>
         <br />
 
         <label for="idade">Idade: </label>
         <input type="text" name='idade'>
-        <br /> --}}
+        <br />
 
         <button type="submit">Enviar</button>
 

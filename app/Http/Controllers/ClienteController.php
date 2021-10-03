@@ -26,9 +26,14 @@ class ClienteController extends Controller
     {
         //
         dd(
-            $request->input('nome', 'nome não definido'),
-            $request->input('idade', 'idade não definida'),
+            // $request->input('nome', 'nome não definido'),
+            // $request->input('idade', 'idade não definida'),
             // $request->input('em')
+            // $request->nome,
+            // $request->idade,
+            //$request->all(),
+            //$request->except('_token')
+            $request->only(['nome', 'idade'])
         );
     }
 }
