@@ -13,6 +13,10 @@ class ClienteController extends Controller
      */
     public function create()
     {
+        // echo $request->path();
+        // echo request()->path();
+        // dd(request()->url());
+        // dd(request()->method());
         return view('create');
     }
 
@@ -30,6 +34,9 @@ class ClienteController extends Controller
         // $dados = $request->all();
 
         // echo $dados['cliente']['nome'];
-        dd($request->foto->store('public'));
+        // dd($request->foto->store('public'));
+        // dd(request()->method());
+        // dd(request()->header());
+        dd($request->all());
     }
 }
