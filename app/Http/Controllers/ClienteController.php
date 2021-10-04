@@ -9,9 +9,7 @@ class ClienteController extends Controller
 {
     public function index()
     {
-        // return redirect('/clientes/create');
-        //return redirect()->action('App\Http\Controllers\ClienteController@create');
-        return redirect()->away('https://www.google.com');
+        //
     }
     /**
      * Show the form for creating a new resource.
@@ -31,6 +29,7 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+        return redirect()->route('clientes.create')
+            ->with('mensagem', 'Cliente criado com sucesso');
     }
 }

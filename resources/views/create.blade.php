@@ -9,6 +9,11 @@
 </head>
 
 <body>
+    @if (session('mensagem'))
+    <div>
+        {{session('mensagem')}}
+    </div>
+    @endif
     <form action="{{ route('clientes.store')}}" method="POST" enctype="multipart/form-data">
         @csrf
         <label for="nome">Nome: </label>
