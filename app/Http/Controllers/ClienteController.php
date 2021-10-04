@@ -9,11 +9,17 @@ class ClienteController extends Controller
 {
     public function index(Response $response)
     {
+        $clientes = [
+            "Joao" => ['nome' => 'Joao da Silva'],
+            "Maria" => ['nome' => 'Maria da Silva']
+        ];
+        //return $clientes;
         // return $response->setContent('<h1>ola mundo</h1>')
         //     ->setStatusCode(200)
         //     ->header('Content-Type', 'text/html');
         //return response('<h1>ola mundo</h1>');
-        return '<h1>ola mundo</h1>';
+        //return '<h1>ola mundo</h1>';
+        return response()->json($clientes);
     }
     /**
      * Show the form for creating a new resource.
